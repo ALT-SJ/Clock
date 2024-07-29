@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 90%;
+    max-width: 1000px;
+}
+
+.clock-container, .timer-container, .stopwatch-container {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden; /* Ensures content doesn't overflow */
+}
+
+.clock-container h1, .timer-container h2, .stopwatch-container h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.clock, .timer-display, .stopwatch-display {
+    font-size: 3em;
+    margin: 20px 0;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    font-size: 1em;
+    width: 60px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.3);
+    color: #fff;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.btn {
+    background: #ff5722;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    flex: 1 1 100px; /* Allow buttons to grow/shrink but maintain minimum width */
+    text-align: center;
+}
+
+.btn:hover {
+    background: #e64a19;
+    transform: scale(1.05);
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
